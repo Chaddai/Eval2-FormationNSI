@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 
+
 # %% [markdown]
 # # Une caisse automatique pour NSIThlon : Correction
 # 
@@ -169,10 +172,9 @@ import nsithlon as nsi
 nsi.genere_panier()
 
 # %% [markdown]
-# 12. Nous répétons simplement 10 fois à l'aide d'une boucle Pour la génération aléatoire d'un panier puis l'affichage du ticket correspondant :
+#   Nous répétons simplement 10 fois à l'aide d'une boucle Pour la génération aléatoire d'un panier puis l'affichage du ticket correspondant :
 
 # %%
-## 12)
 
 for _ in range(10):
     panier_aleatoire = nsi.genere_panier()
