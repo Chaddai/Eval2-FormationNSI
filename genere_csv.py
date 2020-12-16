@@ -6,7 +6,7 @@ import random
 
 produits = []
 usedCodes = set()
-with open("produits.csv", "r", newline="",encoding="utf-8") as source:
+with open("produits copy.csv", "r", newline="",encoding="utf-8") as source:
     reader = csv.reader(source)
     for (name, code, price) in reader:
         produits.append( (name, code, float(price)) )
@@ -26,15 +26,15 @@ def randomColor(): return random.choice(['BLA','JAU','NOIR','ROU','BLEU','VIO'])
 
 gens = [
     (lambda : f"PANT {random.randint(1,5)*100} {randomSize()}", (20, 60)),
-    (lambda : f"BIKE LOCK {random.randint(1,5)*100} {randomColor()}", (20, 60)),
-    (lambda : f"ANTIVOL VELO {random.randint(1,5)*100} {randomSize()}", (20, 60)),
-    (lambda : f"PORTE-BIDON {random.randint(20,35)*10} {randomColor()}", (20, 60)),
-    (lambda : f"SLEEPING BAG {random.randint(1,5)*10} {randomColor()}", (20, 60)),
-    (lambda : f"CHAUS R{random.randint(3,7)*100} {randomColor()}", (20, 60)),
-    (lambda : f"SACOCHE VELO {random.randint(1,5)*100} {randomColor()}", (20, 60)),
-    (lambda : f"POIDS {random.randint(1,50)}K {randomColor()}", (20, 60)),
-    (lambda : f"TAPIS TRAINING {random.randint(1,5)*100}", (20, 60)),
-    (lambda : f"CLIP {random.randint(1,5)*100} 2018 {randomColor()}", (20, 60))
+    (lambda : f"BIKE LOCK {random.randint(1,5)*100} {randomColor()}", (10, 70)),
+    (lambda : f"ANTIVOL VELO {random.randint(1,5)*100} {randomSize()}", (5, 30)),
+    (lambda : f"PORTE-BIDON {random.randint(20,35)*10} {randomColor()}", (5, 20)),
+    (lambda : f"SLEEPING BAG {random.randint(1,5)*10} {randomColor()}", (40, 150)),
+    (lambda : f"CHAUS R{random.randint(3,7)*100} {randomColor()}", (5, 40)),
+    (lambda : f"SACOCHE VELO {random.randint(1,5)*100} {randomColor()}", (30, 100)),
+    (lambda : f"POIDS {random.randint(1,50)}K {randomColor()}", (10, 100)),
+    (lambda : f"TAPIS TRAINING {random.randint(1,5)*100}", (50, 150)),
+    (lambda : f"CLIP {random.randint(1,5)*100} 2018 {randomColor()}", (5, 15))
 ]
 
 with open("produits.csv","w",newline="",encoding="utf-8") as sink:
